@@ -5,6 +5,14 @@ from .models import Visitor
 import json
 from django.core import serializers
 
+
+
+def home(request):
+    return render(request, 'index.html')
+
+
+
+
 def visitawa(request):
     print('request.body', request.body)
     data = json.loads(request.body)
